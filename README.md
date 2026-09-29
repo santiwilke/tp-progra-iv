@@ -1,59 +1,50 @@
-# TpPrograIv
+# Sistema de cine - TP1 Programación IV
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.0.
+Aplicación web para un cine: cartelera, compra de entradas eligiendo butacas en tiempo real, productos del candy bar, entrada en PDF con QR, validación de QR para empleados y panel de administración.
 
-## Development server
+Trabajo Práctico N.º 1 - Programación IV - UTN FRA - Div. 141 - 2026 C2
+Alumno: Santiago Wilke
 
-To start a local development server, run:
+## Stack
 
-```bash
-ng serve
-```
+- Angular 22 (componentes standalone, signals, sin zone.js)
+- Supabase: Auth, base de datos PostgreSQL, Realtime y Storage
+- PWA con `@angular/service-worker`
+- Deploy: pendiente
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Cómo levantarlo
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Requiere Node 22.22 o superior.
 
 ```bash
-ng generate --help
+npm install
+npm start
 ```
 
-## Building
+La app queda en `http://localhost:4200`. Antes hay que completar `src/environments/environment.development.ts` con la URL y la clave pública del proyecto de Supabase.
 
-To build the project run:
+## Estructura
 
-```bash
-ng build
+```
+src/app/
+  core/          servicios, guards y modelos que usa toda la app
+  shared/        componentes, pipes, directivas y validadores reutilizables
+  features/      pantallas agrupadas por sección
+    cartelera/   inicio, listado de películas, detalle y próximamente
+    compra/      butacas, candy bar, resumen y pago
+    auth/        login y registro
+    perfil/      datos, puntos, crédito e historial
+    empleado/    validación de QR (lazy loading)
+    admin/       panel de administración (lazy loading)
+supabase/
+  migrations/    scripts SQL (tablas, RLS y funciones)
+  functions/     Edge Functions (notificaciones y tareas programadas)
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Arquitectura
 
-## Running unit tests
+En progreso.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Decisiones técnicas
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+En progreso.
