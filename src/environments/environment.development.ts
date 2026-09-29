@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  // URL y clave pública (publishable) del proyecto de Supabase
+  // URL y clave anon (pública) del proyecto de Supabase
   supabaseUrl: '',
-  supabaseKey: '',
+  supabaseAnonKey: '',
 };

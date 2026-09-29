@@ -7,7 +7,7 @@ Alumno: Santiago Wilke
 
 ## Stack
 
-- Angular 22 (componentes standalone, signals, sin zone.js)
+- Angular 22 (componentes standalone, signals, Signal Forms, sin zone.js)
 - Supabase: Auth, base de datos PostgreSQL, Realtime y Storage
 - PWA con `@angular/service-worker`
 - Deploy: pendiente
