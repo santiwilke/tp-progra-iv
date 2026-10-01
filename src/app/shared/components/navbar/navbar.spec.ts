@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PeliculaDetalle } from './pelicula-detalle';
+import { provideRouter } from '@angular/router';
+import { Navbar } from './navbar';
 
-describe('PeliculaDetalle', () => {
-  let component: PeliculaDetalle;
-  let fixture: ComponentFixture<PeliculaDetalle>;
+describe('Navbar', () => {
+  let component: Navbar;
+  let fixture: ComponentFixture<Navbar>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PeliculaDetalle],
+      imports: [Navbar],
+      providers: [provideRouter([])],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PeliculaDetalle);
-    fixture.componentRef.setInput('peliculaId', 1);
+    fixture = TestBed.createComponent(Navbar);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

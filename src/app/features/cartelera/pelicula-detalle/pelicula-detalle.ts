@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input, numberAttribute } from '@angular/core';
 
 @Component({
   imports: [],
@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './pelicula-detalle.scss',
   templateUrl: './pelicula-detalle.html',
 })
-export class PeliculaDetalle {}
+export class PeliculaDetalle {
+  // llega desde la ruta /peliculas/:peliculaId
+  peliculaId = input.required({ transform: numberAttribute });
+}

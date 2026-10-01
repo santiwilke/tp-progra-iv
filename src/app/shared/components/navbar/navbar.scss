@@ -1,0 +1,44 @@
+nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+a {
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  background: #f2f2f2;
+}
+
+a.active {
+  background: #e8e8e8;
+  font-weight: 600;
+}
+
+.marca {
+  margin-right: 16px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ingresar {
+  margin-left: auto;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ingresar {
+    margin-left: 0;
+  }
+}
